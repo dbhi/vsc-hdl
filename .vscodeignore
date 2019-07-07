@@ -1,9 +1,6 @@
-.vscode/**
-.vscode-test/**
-out/test/**
-src/**
-.gitignore
-**/tsconfig.json
-**/.eslintrc.json
-**/*.map
-**/*.ts
+**
+!main.js
+!main.js.map
+!README.md
+!CHANGELOG.md
+/work/

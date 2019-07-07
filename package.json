@@ -12,7 +12,8 @@
     "vscode": "^1.45.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "keywords": [
     "ghdl",
@@ -20,13 +21,15 @@
     "vunit"
   ],
   "activationEvents": [
-    "onCommand:vsc-hdl.helloWorld"
+    "onCommand:extension.helloWorld",
+    "onView:hdlProjects",
+    "onView:hdlResults"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vsc-hdl.helloWorld",
+        "command": "extension.helloWorld",
         "title": "Hello World"
       }
     ],
@@ -48,24 +51,25 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "yarn run compile",
-    "compile": "tsc -p ./",
-    "lint": "eslint src --ext ts",
-    "watch": "tsc -watch -p ./",
-    "pretest": "yarn run compile && yarn run lint",
-    "test": "node ./out/test/runTest.js"
+    "vscode:prepublish": "npm run compile",
+    "compile": "webpack --mode production",
+    "compile-dev": "webpack --mode development",
+    "compile-watch": "webpack --mode development --watch",
+    "build": "tsc -p ./",
+    "test": "node ./dist/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.45.0",
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.4",
-    "eslint": "^6.8.0",
-    "@typescript-eslint/parser": "^2.30.0",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@types/vscode": "^1.44.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
+    "ts-loader": "^7.0.2",
+    "tslint": "^6.1.2",
     "typescript": "^3.8.3",
-    "vscode-test": "^1.3.0"
+    "vscode-test": "^1.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
