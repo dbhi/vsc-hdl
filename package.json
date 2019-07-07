@@ -1,0 +1,77 @@
+{
+	"name": "vsc-hdl",
+	"description": "HDL design with GHDL and VUnit",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dbhi/vsc-hdl"
+	},
+	"publisher": "umarcor",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"ghdl",
+		"vhdl",
+		"vunit"
+	],
+	"activationEvents": [
+		"onCommand:extension.helloWorld",
+		"onView:hdlProjects",
+		"onView:hdlResults"
+	],
+	"main": "./main.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		],
+		"views": {
+			"explorer": [
+				{
+					"id": "hdlProjects",
+					"name": "HDL - Projects"
+				},
+				{
+					"id": "hdlResults",
+					"name": "HDL - Results"
+				}
+			],
+			"dockerView": [
+				{
+					"id": "dockerTasks",
+					"name": "Tasks"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "webpack --mode production",
+		"compile-dev": "webpack --mode development",
+		"compile-watch": "webpack --mode development --watch",
+		"build": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"test": "node ./dist/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^12.12.17",
+		"@types/vscode": "^1.41.0",
+		"glob": "^7.1.6",
+		"mocha": "^6.2.2",
+		"ts-loader": "^6.2.1",
+		"tslint": "^5.20.1",
+		"typescript": "^3.7.3",
+		"vscode-test": "^1.3.0",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10"
+	}
+}
