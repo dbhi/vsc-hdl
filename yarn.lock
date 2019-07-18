@@ -869,10 +869,10 @@ typescript@^3.5.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
   integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
 
-vscode-test@^1.0.0-next.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vscode-test/-/vscode-test-1.0.0.tgz#67f1e28791913ab7a8a9ddb46566c6b83afd9231"
-  integrity sha512-RnZUhxEXYCozHtBAQwX/UISlw0JPqlv1I9LLl4++vcPDIvjs2Zfz2Inp8haxixS1sOTftHJ9kiecrwWF9S3taQ==
+vscode-test@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vscode-test/-/vscode-test-1.0.2.tgz#fcd0f7e8e380183478cfa3d16de0eac73161aa81"
+  integrity sha512-lBvwzJWl/uVfsa2buouUwIaN10MIaiZMlTXP+rESGrHLa12Nt8nP2xroZYdbnSv1DrTCFjnQAsGXbCJnQC585A==
   dependencies:
     http-proxy-agent "^2.1.0"
     https-proxy-agent "^2.2.1"
