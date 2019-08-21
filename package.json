@@ -58,7 +58,7 @@
 		"glob": "^7.1.4",
 		"mocha": "^6.2.0",
 		"typescript": "^3.5.3",
-		"tslint": "^5.12.1",
+		"tslint": "^5.19.0",
 		"vscode-test": "^1.2.0"
 	}
 }
