@@ -1,5 +1,6 @@
 {
 	"name": "vsc-hdl",
+	"displayName": "VSCode HDL Extension",
 	"description": "HDL design with GHDL and VUnit",
 	"version": "0.0.1",
 	"repository": {
@@ -21,15 +22,26 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.helloWorld",
-		"onView:hdlProjects",
-		"onView:hdlResults"
+		"onView:dockerTemplates"
 	],
-	"main": "./main.js",
+	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "dockerTemplates.addTemplate",
+				"title": "Docker Templates: Add"
+			},
+			{
+				"command": "dockerTemplates.rmTemplate",
+				"title": "Docker Templates: Remove"
+			},
+			{
+				"command": "dockerTemplates.runTemplate",
+				"title": "Docker Templates: Run"
+			},
+			{
+				"command": "dockerTemplates.inspectTemplate",
+				"title": "Docker Templates: Inspect"
 			}
 		],
 		"views": {
@@ -41,12 +53,16 @@
 				{
 					"id": "hdlResults",
 					"name": "HDL - Results"
+				},
+				{
+					"id": "fileExplorer",
+					"name": "File Explorer"
 				}
 			],
 			"dockerView": [
 				{
-					"id": "dockerTasks",
-					"name": "Tasks"
+					"id": "dockerTemplates",
+					"name": "Templates"
 				}
 			]
 		}
@@ -57,7 +73,6 @@
 		"compile-dev": "webpack --mode development",
 		"compile-watch": "webpack --mode development --watch",
 		"build": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
 		"test": "node ./dist/test/runTest.js"
 	},
 	"devDependencies": {
