@@ -1,0 +1,250 @@
+{
+  "name": "vsc-hdl",
+  "displayName": "VSCode HDL Extension",
+  "description": "HDL design with GHDL and VUnit",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbhi/vsc-hdl"
+  },
+  "publisher": "umarcor",
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "ghdl",
+    "vhdl",
+    "vunit"
+  ],
+  "activationEvents": [
+    "onView:dockerTemplates",
+    "onView:fileExplorer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Docker",
+      "properties": {
+        "docker.templates": {
+          "description": "Templates to run docker containers.",
+          "type": "array",
+          "default": [
+            {
+              "label": "Daemon",
+              "description": "run daemonized",
+              "interactive": false,
+              "remove": true
+            },
+            {
+              "label": "Interactive",
+              "description": "run interactive",
+              "interactive": true,
+              "remove": true
+            },
+            {
+              "label": "Interactive with pwd",
+              "description": "run interactive with pwd bind to /src",
+              "interactive": true,
+              "remove": true,
+              "volumes": [
+                "$(pwd):/src"
+              ]
+            },
+            {
+              "label": "Interactive with x11docker",
+              "description": "run interactive with x11docker",
+              "x11docker": "runx --no-auth -- x11docker --hostdisplay --user=0",
+              "volumes": [
+                "$(pwd):/src"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "fileExplorer",
+          "name": "HDL | File Explorer"
+        }
+      ],
+      "dockerView": [
+        {
+          "id": "dockerTemplates",
+          "name": "Templates"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "dockerTemplates.runImage",
+        "title": "Run Template",
+        "category": "Docker Images"
+      },
+      {
+        "command": "dockerTemplates.refresh",
+        "title": "Refresh",
+        "category": "Docker Templates",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "dockerTemplates.run",
+        "category": "Docker Templates",
+        "title": "Run",
+        "icon": {
+          "light": "resources/light/run.svg",
+          "dark": "resources/dark/run.svg"
+        }
+      },
+      {
+        "command": "dockerTemplates.add",
+        "category": "Docker Templates",
+        "title": "Add"
+      },
+      {
+        "command": "dockerTemplates.inspect",
+        "category": "Docker Templates",
+        "title": "Inspect"
+      },
+      {
+        "command": "dockerTemplates.cp",
+        "category": "Docker Templates",
+        "title": "Copy"
+      },
+      {
+        "command": "dockerTemplates.rm",
+        "category": "Docker Templates",
+        "title": "Remove",
+        "icon": {
+          "light": "resources/light/close.svg",
+          "dark": "resources/dark/close.svg"
+        }
+      },
+      {
+        "command": "dockerTemplates.addOpt",
+        "category": "Docker Templates",
+        "title": "Add option"
+      },
+      {
+        "command": "dockerTemplates.editOpt",
+        "category": "Docker Templates",
+        "title": "Edit option",
+        "icon": {
+          "light": "resources/light/edit.svg",
+          "dark": "resources/dark/edit.svg"
+        }
+      },
+      {
+        "command": "dockerTemplates.rmOpt",
+        "category": "Docker Templates",
+        "title": "Remove option",
+        "icon": {
+          "light": "resources/light/close.svg",
+          "dark": "resources/dark/close.svg"
+        }
+      },
+      {
+        "command": "fileExplorer.refreshFile",
+        "category": "File Explorer",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "fileExplorer.openFile",
+        "category": "File Explorer",
+        "title": "Open File"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "dockerTemplates.refresh",
+          "when": "view == dockerTemplates",
+          "group": "navigation"
+        },
+        {
+          "command": "dockerTemplates.run",
+          "when": "view == dockerTemplates"
+        },
+        {
+          "command": "dockerTemplates.add",
+          "when": "view == dockerTemplates"
+        },
+        {
+          "command": "dockerTemplates.inspect",
+          "when": "view == dockerTemplates"
+        },
+        {
+          "command": "dockerTemplates.rm",
+          "when": "view == dockerTemplates"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "dockerTemplates.runImage",
+          "when": "view == dockerImages && viewItem == image",
+          "group": "images_1_run@2"
+        },
+        {
+          "command": "dockerTemplates.run",
+          "when": "view == dockerTemplates && viewItem == template",
+          "group": "inline"
+        },
+        {
+          "command": "dockerTemplates.addOpt",
+          "when": "view == dockerTemplates && viewItem == template"
+        },
+        {
+          "command": "dockerTemplates.cp",
+          "when": "view == dockerTemplates && viewItem == template"
+        },
+        {
+          "command": "dockerTemplates.rm",
+          "when": "view == dockerTemplates && viewItem == template"
+        },
+        {
+          "command": "dockerTemplates.editOpt",
+          "when": "view == dockerTemplates && viewItem =~ /(templateProperty|templateFixedProperty)/",
+          "group": "inline"
+        },
+        {
+          "command": "dockerTemplates.rmOpt",
+          "when": "view == dockerTemplates && viewItem == templateProperty"
+        },
+        {
+          "command": "fileExplorer.refreshFile",
+          "when": "view == fileExplorer && viewItem == file",
+          "group": "inline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^12.12.20",
+    "@types/rimraf": "^2.0.3",
+    "@types/vscode": "^1.41.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0"
+  }
+}
