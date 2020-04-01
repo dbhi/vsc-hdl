@@ -63,6 +63,7 @@ $(command -v winpty) docker run --rm -itv /$(pwd)://src -w //src node bash
 
 # References
 
+- [VUnit Test Explorer](https://marketplace.visualstudio.com/items?itemName=hbohlin.vunit-test-explorer) by Henrik Bohlin
 - [Extension Guides](https://code.visualstudio.com/api/extension-guides/overview).
 - [Contribution Points](https://code.visualstudio.com/api/references/contribution-points).
 - [Bundling your extension](https://code.visualstudio.com/api/working-with-extensions/testing-extension).
