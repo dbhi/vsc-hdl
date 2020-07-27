@@ -31,7 +31,7 @@ jobs:
         vsce package
         mkdir vsc-hdl-vsix
         mv vsc-hdl-*.vsix vsc-hdl-vsix
-    - uses: actions/upload-artifact@master
+    - uses: actions/upload-artifact@v2
       with:
         name: vsc-hdl-vsix
         path: vsc-hdl-vsix
