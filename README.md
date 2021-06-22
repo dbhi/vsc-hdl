@@ -54,7 +54,14 @@ $(command -v winpty) docker run --rm -itv /$(pwd)://src -w //src node bash
 
 # References
 
-- [VUnit Test Explorer](https://marketplace.visualstudio.com/items?itemName=hbohlin.vunit-test-explorer) by Henrik Bohlin
+- VSCode Extensions
+  - [TerosHDL](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl) by Teros Technology
+  - [VUnit Test Explorer](https://marketplace.visualstudio.com/items?itemName=hbohlin.vunit-test-explorer) by Henrik Bohlin
+  - [VHDL LS](https://marketplace.visualstudio.com/items?itemName=hbohlin.vhdl-ls) by Henrik Bohlin
+  - [GHDL Interface](https://github.com/johannesbonk/vscode-ghdl-interface) by Johannes Bonk
+  - [HDL Checker LSP Client](https://marketplace.visualstudio.com/items?itemName=suoto.hdl-checker-client) by suoto
+  - [VHDL-Tool](https://marketplace.visualstudio.com/items?itemName=vhdl-tool.vhdl-tool) (non open source)
+  - [WaveTrace](https://marketplace.visualstudio.com/items?itemName=wavetrace.wavetrace) by wavetrace (non open source)
 - [hackfin.gitlab.io/xhdl](https://hackfin.gitlab.io/xhdl/)
 - [code.visualstudio.com/api](https://code.visualstudio.com/api)
   - [Extension Guides](https://code.visualstudio.com/api/extension-guides/overview).
