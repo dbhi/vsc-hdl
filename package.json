@@ -9,7 +9,7 @@
   },
   "publisher": "umarcor",
   "engines": {
-    "vscode": "^1.57.0"
+    "vscode": "^1.57.1"
   },
   "categories": [
     "Programming Languages"
