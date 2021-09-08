@@ -61,6 +61,7 @@ $(command -v winpty) docker run --rm -itv /$(pwd)://src -w //src node bash
   - [GHDL Interface](https://github.com/johannesbonk/vscode-ghdl-interface) by Johannes Bonk
   - [HDL Checker LSP Client](https://marketplace.visualstudio.com/items?itemName=suoto.hdl-checker-client) by suoto
   - [awesome-vhdl](https://github.com/puorc/awesome-vhdl) by puorc
+  - [impulse.vscode](https://github.com/toem/impulse.vscode)
   - [VHDL-Tool](https://marketplace.visualstudio.com/items?itemName=vhdl-tool.vhdl-tool) (non open source)
   - [WaveTrace](https://marketplace.visualstudio.com/items?itemName=wavetrace.wavetrace) by wavetrace (non open source)
 - [hackfin.gitlab.io/xhdl](https://hackfin.gitlab.io/xhdl/)
