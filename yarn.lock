@@ -101,10 +101,10 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-9.0.0.tgz#3205bcd15ada9bc681ac20bef64e9e6df88fd297"
   integrity sha512-scN0hAWyLVAvLR9AyW7HoFF5sJZglyBsbPuHO4fv7JRvfmPBMfp1ozWqOf/e4wwPNxezBZXRfWzMb6iFLgEVRA==
 
-"@types/node@*", "@types/node@^16.11.10":
-  version "16.11.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.10.tgz#2e3ad0a680d96367103d3e670d41c2fed3da61ae"
-  integrity sha512-3aRnHa1KlOEEhJ6+CvyHKK5vE9BcLGjtUpwvqYLRvYNQKMfabu3BwfJaA/SLW8dxe28LsNDjtHwePTuzn3gmOA==
+"@types/node@*", "@types/node@^16.11.11":
+  version "16.11.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
+  integrity sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==
 
 "@types/vscode@^1.62.0":
   version "1.62.0"
@@ -1354,9 +1354,9 @@ supports-color@^7.1.0:
     has-flag "^4.0.0"
 
 table@^6.0.9:
-  version "6.7.3"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.7.3.tgz#255388439715a738391bd2ee4cbca89a4d05a9b7"
-  integrity sha512-5DkIxeA7XERBqMwJq0aHZOdMadBx4e6eDoFRuyT5VR82J0Ycg2DwM6GfA/EQAhJ+toRTaS1lIdSQCqgrmhPnlw==
+  version "6.7.5"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.7.5.tgz#f04478c351ef3d8c7904f0e8be90a1b62417d238"
+  integrity sha512-LFNeryOqiQHqCVKzhkymKwt6ozeRhlm8IL1mE8rNUurkir4heF6PzMyRgaTa4tlyPTGGgXuvVOF/OLWiH09Lqw==
   dependencies:
     ajv "^8.0.1"
     lodash.truncate "^4.4.2"
