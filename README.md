@@ -1,10 +1,3 @@
-<p align="center">
-  <a title="Dependency Status" href="https://david-dm.org/dbhi/vsc-hdl"><img src="https://img.shields.io/david/dbhi/vsc-hdl.svg?longCache=true&style=flat-square&label=deps"></a><!--
-  -->
-  <a title="DevDependency Status" href="https://david-dm.org/dbhi/vsc-hdl?type=dev"><img src="https://img.shields.io/david/dev/dbhi/vsc-hdl.svg?longCache=true&style=flat-square&label=devdeps"></a><!--
-  -->
-</p>
-
 **vsc-hdl** is a [Visual Studio Code](https://code.visualstudio.com/) (VSC) [Extension](https://code.visualstudio.com/docs/editor/extension-gallery) to hopefully improve the UX of hardware designers writting modern VHDL (i.e. `>=2008`) with (FOSS) EDA tools.
 
 # Features (with no ETA)
